@@ -9,27 +9,32 @@ import RxFlow
 
 class AppFlow: Flow {
     
-    var rootVC = UINavigationController()
-
-    var root: RxFlow.Presentable {
-        return self.rootVC
+    let window: UIWindow!
+  
+    init(window: UIWindow) {
+        self.window = window
     }
     
-    init(rootVC: UINavigationController) {
-        self.rootVC = rootVC
+    var root: Presentable {
+        return self.window
     }
     
-    func navigate(to step: RxFlow.Step) -> RxFlow.FlowContributors {
+    func navigate(to step: Step) -> FlowContributors {
         
         guard let step = step as? TestStep else { return .none }
         
         switch step {
         case.writeEmotion:
-            return self.navigateToWrite()
-        case.checkEmotion:
-            return self.navigateToCheck()
+            return self.navigateToWriteFlow()
         }
     }
     
-    
+    private func navigateToWriteFlow() -> FlowContributors {
+        let viewModel = AppStepper()
+        let mainFlow = MainFlow(viewModel: viewModel)
+        Flows.use(mainFlow, when: .created) { root in
+            self.window.rootViewController = root
+        }
+        return .one(flowContributor: .contribute(withNextPresentable: mainFlow, withNextStepper: viewModel))
+    }
 }

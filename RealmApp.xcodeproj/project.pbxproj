@@ -19,6 +19,8 @@
 		524E3DB2292B244F00259770 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DB1292B244F00259770 /* FeedVC.swift */; };
 		52785A88292F58D500C617B0 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52785A87292F58D500C617B0 /* Step.swift */; };
 		52785A8B292F643B00C617B0 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52785A8A292F643B00C617B0 /* AppFlow.swift */; };
+		52785A8D292F69CA00C617B0 /* AppStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52785A8C292F69CA00C617B0 /* AppStepper.swift */; };
+		52785A91292F809900C617B0 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52785A90292F809900C617B0 /* MainFlow.swift */; };
 		52D30724292A1AC70068EAFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D30723292A1AC70068EAFB /* AppDelegate.swift */; };
 		52D30726292A1AC70068EAFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D30725292A1AC70068EAFB /* SceneDelegate.swift */; };
 		52D3072D292A1AC80068EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D3072C292A1AC80068EAFB /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		524E3DB1292B244F00259770 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		52785A87292F58D500C617B0 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		52785A8A292F643B00C617B0 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		52785A8C292F69CA00C617B0 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
+		52785A90292F809900C617B0 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 		52D30720292A1AC70068EAFB /* RealmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D30723292A1AC70068EAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52D30725292A1AC70068EAFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 			children = (
 				52785A87292F58D500C617B0 /* Step.swift */,
 				52785A8A292F643B00C617B0 /* AppFlow.swift */,
+				52785A90292F809900C617B0 /* MainFlow.swift */,
+				52785A8C292F69CA00C617B0 /* AppStepper.swift */,
 			);
 			path = RxFlow;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 			files = (
 				52785A8B292F643B00C617B0 /* AppFlow.swift in Sources */,
 				52187729292E4079008E7F6D /* MyPageVC.swift in Sources */,
+				52785A91292F809900C617B0 /* MainFlow.swift in Sources */,
 				52F2C718292DDB5300B0C178 /* CustomCell.swift in Sources */,
 				524E3DA1292A34B800259770 /* extension.swift in Sources */,
 				52D30724292A1AC70068EAFB /* AppDelegate.swift in Sources */,
@@ -306,6 +313,7 @@
 				524E3DB2292B244F00259770 /* FeedVC.swift in Sources */,
 				522D102C292B3BB100B935E9 /* model.swift in Sources */,
 				522D1034292BB2FE00B935E9 /* WriteEmotionVC.swift in Sources */,
+				52785A8D292F69CA00C617B0 /* AppStepper.swift in Sources */,
 				52D30726292A1AC70068EAFB /* SceneDelegate.swift in Sources */,
 				522D1038292CEF2600B935E9 /* CheckEmotion.swift in Sources */,
 				52187727292E3682008E7F6D /* tabBarControlloer.swift in Sources */,

@@ -6,11 +6,14 @@
 //
 
 import UIKit
-import RealmSwift
+import RxFlow
+import RxSwift
+import RxCocoa
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+    var coordinator = FlowCoordinator()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -19,8 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .systemBackground
         window?.rootViewController = UINavigationController(rootViewController: tabBarController())
-//        window?.rootViewController = UINavigationController(rootViewController: WelcomePageVC())
-
+        
         window?.makeKeyAndVisible()
         window?.tintColor = .mainColor
     }

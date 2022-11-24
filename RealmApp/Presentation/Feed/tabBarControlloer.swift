@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import RxFlow
+import RxCocoa
 
-class tabBarController: UITabBarController {
+class tabBarController: UITabBarController, Stepper {
+    
+    var steps = PublishRelay<Step>()
     
     private let addButton = UIButton().then {
         $0.setImage(UIImage(named: "tabBaraddcircle"), for: .normal)
@@ -19,9 +23,7 @@ class tabBarController: UITabBarController {
     }
     
     @objc func nextPage() {
-        print("dd")
-        let rootVC = WriteEmotionVC()
-        navigationController?.pushViewController(rootVC, animated: true)
+        self.steps.accept(TestStep.writeEmotion)
     }
     
     override func viewDidLoad() {

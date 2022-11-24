@@ -38,10 +38,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
-//    private let lineView = UIView().then {
-//        $0.backgroundColor = UIColor(white: 0, alpha: 0.1)
-//    }
-    
     lazy var tableView = UITableView().then {
         $0.register(CustomCell.self, forCellReuseIdentifier: CustomCell.identifier)
         $0.delegate = self
@@ -64,7 +60,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         view.backgroundColor = .systemBackground
         
-//        realmRead()
         setup()
     }
     
@@ -88,13 +83,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             $0.right.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
-        
-//        lineView.snp.makeConstraints {
-//            $0.top.equalTo(lineView.snp.bottom).offset(-1)
-//            $0.left.equalToSuperview()
-//            $0.right.equalToSuperview()
-//            $0.bottom.equalTo(tableView.snp.top)
-//        }
         
         tableView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(60)

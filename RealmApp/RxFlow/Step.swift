@@ -10,5 +10,4 @@ import RxFlow
 enum TestStep: Step {
     
     case writeEmotion
-    case checkEmotion
 }
