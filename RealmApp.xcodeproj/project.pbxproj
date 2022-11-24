@@ -17,10 +17,6 @@
 		522D1036292CD91600B935E9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522D1035292CD91600B935E9 /* Launch Screen.storyboard */; };
 		522D1038292CEF2600B935E9 /* WriteCheckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D1037292CEF2600B935E9 /* WriteCheckVC.swift */; };
 		524E3DA1292A34B800259770 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DA0292A34B800259770 /* extension.swift */; };
-		524E3DA5292A6E5400259770 /* WelcomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DA4292A6E5400259770 /* WelcomePageVC.swift */; };
-		524E3DA8292A745C00259770 /* InputNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DA7292A745C00259770 /* InputNameVC.swift */; };
-		524E3DAE292B1FF300259770 /* FirstIntroPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DAD292B1FF300259770 /* FirstIntroPageVC.swift */; };
-		524E3DB0292B218500259770 /* SecondIntroPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DAF292B218500259770 /* SecondIntroPageVC.swift */; };
 		524E3DB2292B244F00259770 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DB1292B244F00259770 /* FeedVC.swift */; };
 		52D30724292A1AC70068EAFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D30723292A1AC70068EAFB /* AppDelegate.swift */; };
 		52D30726292A1AC70068EAFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D30725292A1AC70068EAFB /* SceneDelegate.swift */; };
@@ -38,10 +34,6 @@
 		522D1035292CD91600B935E9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		522D1037292CEF2600B935E9 /* WriteCheckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCheckVC.swift; sourceTree = "<group>"; };
 		524E3DA0292A34B800259770 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
-		524E3DA4292A6E5400259770 /* WelcomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageVC.swift; sourceTree = "<group>"; };
-		524E3DA7292A745C00259770 /* InputNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNameVC.swift; sourceTree = "<group>"; };
-		524E3DAD292B1FF300259770 /* FirstIntroPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroPageVC.swift; sourceTree = "<group>"; };
-		524E3DAF292B218500259770 /* SecondIntroPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroPageVC.swift; sourceTree = "<group>"; };
 		524E3DB1292B244F00259770 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		52D30720292A1AC70068EAFB /* RealmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D30723292A1AC70068EAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,12 +75,12 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
-		522D102D292B3CDE00B935E9 /* Realm */ = {
+		522D102D292B3CDE00B935E9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				522D102B292B3BB100B935E9 /* model.swift */,
 			);
-			path = Realm;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		522D1030292B944600B935E9 /* Write */ = {
@@ -104,24 +96,11 @@
 		524E3DA3292A6DEE00259770 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				522D102D292B3CDE00B935E9 /* Realm */,
 				524E3DB3292B245400259770 /* Feed */,
 				522D1030292B944600B935E9 /* Write */,
 				5218772A292E408B008E7F6D /* MyPage */,
-				524E3DA6292A744C00259770 /* Sign */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		524E3DA6292A744C00259770 /* Sign */ = {
-			isa = PBXGroup;
-			children = (
-				524E3DA4292A6E5400259770 /* WelcomePageVC.swift */,
-				524E3DAD292B1FF300259770 /* FirstIntroPageVC.swift */,
-				524E3DAF292B218500259770 /* SecondIntroPageVC.swift */,
-				524E3DA7292A745C00259770 /* InputNameVC.swift */,
-			);
-			path = Sign;
 			sourceTree = "<group>";
 		};
 		524E3DB3292B245400259770 /* Feed */ = {
@@ -132,6 +111,28 @@
 				52187726292E3682008E7F6D /* tabBarControlloer.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		52785A85292F24CF00C617B0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				52D30723292A1AC70068EAFB /* AppDelegate.swift */,
+				52D30725292A1AC70068EAFB /* SceneDelegate.swift */,
+				524E3DA0292A34B800259770 /* extension.swift */,
+				522D1035292CD91600B935E9 /* Launch Screen.storyboard */,
+				52D30731292A1AC80068EAFB /* Info.plist */,
+				52785A86292F24DF00C617B0 /* Assets */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		52785A86292F24DF00C617B0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				52D3072C292A1AC80068EAFB /* Assets.xcassets */,
+				522D1031292BA27800B935E9 /* SDMiSaeng.ttf */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		52D30717292A1AC70068EAFB = {
@@ -155,14 +156,9 @@
 		52D30722292A1AC70068EAFB /* RealmApp */ = {
 			isa = PBXGroup;
 			children = (
-				52D30723292A1AC70068EAFB /* AppDelegate.swift */,
-				52D30725292A1AC70068EAFB /* SceneDelegate.swift */,
-				524E3DA0292A34B800259770 /* extension.swift */,
-				52D3072C292A1AC80068EAFB /* Assets.xcassets */,
-				522D1031292BA27800B935E9 /* SDMiSaeng.ttf */,
+				52785A85292F24CF00C617B0 /* Application */,
+				522D102D292B3CDE00B935E9 /* Data */,
 				524E3DA3292A6DEE00259770 /* Presentation */,
-				522D1035292CD91600B935E9 /* Launch Screen.storyboard */,
-				52D30731292A1AC80068EAFB /* Info.plist */,
 			);
 			path = RealmApp;
 			sourceTree = "<group>";
@@ -293,13 +289,9 @@
 				522D102F292B944300B935E9 /* ChoiceEmotionVC.swift in Sources */,
 				52187729292E4079008E7F6D /* MyPageVC.swift in Sources */,
 				52F2C718292DDB5300B0C178 /* CustomCell.swift in Sources */,
-				524E3DA8292A745C00259770 /* InputNameVC.swift in Sources */,
-				524E3DA5292A6E5400259770 /* WelcomePageVC.swift in Sources */,
-				524E3DB0292B218500259770 /* SecondIntroPageVC.swift in Sources */,
 				524E3DA1292A34B800259770 /* extension.swift in Sources */,
 				52D30724292A1AC70068EAFB /* AppDelegate.swift in Sources */,
 				524E3DB2292B244F00259770 /* FeedVC.swift in Sources */,
-				524E3DAE292B1FF300259770 /* FirstIntroPageVC.swift in Sources */,
 				522D102C292B3BB100B935E9 /* model.swift in Sources */,
 				522D1034292BB2FE00B935E9 /* WriteEmotionVC.swift in Sources */,
 				52D30726292A1AC70068EAFB /* SceneDelegate.swift in Sources */,

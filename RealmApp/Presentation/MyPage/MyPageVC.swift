@@ -20,7 +20,7 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     }
     
     private let GuideText = UILabel().then {
-        $0.text = "환영해요! 개발자님"
+        $0.text = "환영해요!"
         $0.font = UIFont(name: "SDMiSaeng", size: 32)
         $0.textColor = .black
     }
@@ -32,7 +32,7 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     }
     
     private let nameTextField = UITextField().then {
-        $0.placeholder = "바꾸실 이름을 입력해주세요."
+        $0.placeholder = "원하는 이름을 입력해주세요."
         $0.font = UIFont(name: "SDMiSaeng", size: 28)
         $0.borderStyle = .none
     }
@@ -120,7 +120,7 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
         let name = realm.objects(userData.self)
         for userData in name {
             let username = userData.userName
-            GuideText.text = "\(username)님은 지금 기뻐요."
+            GuideText.text = "\(username)님! 환영해요."
         }
     }
     

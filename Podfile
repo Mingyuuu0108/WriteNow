@@ -9,5 +9,6 @@ target 'RealmApp' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'Then'
   pod 'RealmSwift', '~>10'
+  pod 'RxFlow'
 
 end

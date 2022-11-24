@@ -20,7 +20,7 @@ class WriteEmotionVC: UIViewController {
     }
     
     private let emotionText = UILabel().then {
-        $0.text = "당신은 지금 설레요!"
+        $0.text = "당신은 지금 어떠신가요?"
         $0.font = UIFont(name: "SDMiSaeng", size: 36)
         $0.textColor = .black
         $0.textAlignment = .center
@@ -69,7 +69,7 @@ class WriteEmotionVC: UIViewController {
         let name = realm.objects(userData.self)
         for userData in name {
             let username = userData.userName
-            emotionText.text = "\(username)님은 지금 기뻐요."
+            emotionText.text = "\(username)님은 지금 어떠신가요?"
         }
     }
     
