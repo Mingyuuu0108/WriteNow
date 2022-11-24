@@ -11,13 +11,14 @@
 		52187727292E3682008E7F6D /* tabBarControlloer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52187726292E3682008E7F6D /* tabBarControlloer.swift */; };
 		52187729292E4079008E7F6D /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52187728292E4079008E7F6D /* MyPageVC.swift */; };
 		522D102C292B3BB100B935E9 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D102B292B3BB100B935E9 /* model.swift */; };
-		522D102F292B944300B935E9 /* ChoiceEmotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D102E292B944300B935E9 /* ChoiceEmotionVC.swift */; };
 		522D1032292BA27800B935E9 /* SDMiSaeng.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 522D1031292BA27800B935E9 /* SDMiSaeng.ttf */; };
 		522D1034292BB2FE00B935E9 /* WriteEmotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D1033292BB2FE00B935E9 /* WriteEmotionVC.swift */; };
 		522D1036292CD91600B935E9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522D1035292CD91600B935E9 /* Launch Screen.storyboard */; };
-		522D1038292CEF2600B935E9 /* WriteCheckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D1037292CEF2600B935E9 /* WriteCheckVC.swift */; };
+		522D1038292CEF2600B935E9 /* CheckEmotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D1037292CEF2600B935E9 /* CheckEmotion.swift */; };
 		524E3DA1292A34B800259770 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DA0292A34B800259770 /* extension.swift */; };
 		524E3DB2292B244F00259770 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E3DB1292B244F00259770 /* FeedVC.swift */; };
+		52785A88292F58D500C617B0 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52785A87292F58D500C617B0 /* Step.swift */; };
+		52785A8B292F643B00C617B0 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52785A8A292F643B00C617B0 /* AppFlow.swift */; };
 		52D30724292A1AC70068EAFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D30723292A1AC70068EAFB /* AppDelegate.swift */; };
 		52D30726292A1AC70068EAFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D30725292A1AC70068EAFB /* SceneDelegate.swift */; };
 		52D3072D292A1AC80068EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D3072C292A1AC80068EAFB /* Assets.xcassets */; };
@@ -28,13 +29,14 @@
 		52187726292E3682008E7F6D /* tabBarControlloer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarControlloer.swift; sourceTree = "<group>"; };
 		52187728292E4079008E7F6D /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		522D102B292B3BB100B935E9 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
-		522D102E292B944300B935E9 /* ChoiceEmotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceEmotionVC.swift; sourceTree = "<group>"; };
 		522D1031292BA27800B935E9 /* SDMiSaeng.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDMiSaeng.ttf; sourceTree = "<group>"; };
 		522D1033292BB2FE00B935E9 /* WriteEmotionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEmotionVC.swift; sourceTree = "<group>"; };
 		522D1035292CD91600B935E9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		522D1037292CEF2600B935E9 /* WriteCheckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCheckVC.swift; sourceTree = "<group>"; };
+		522D1037292CEF2600B935E9 /* CheckEmotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmotion.swift; sourceTree = "<group>"; };
 		524E3DA0292A34B800259770 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		524E3DB1292B244F00259770 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		52785A87292F58D500C617B0 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		52785A8A292F643B00C617B0 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		52D30720292A1AC70068EAFB /* RealmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D30723292A1AC70068EAFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52D30725292A1AC70068EAFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,9 +88,8 @@
 		522D1030292B944600B935E9 /* Write */ = {
 			isa = PBXGroup;
 			children = (
-				522D102E292B944300B935E9 /* ChoiceEmotionVC.swift */,
 				522D1033292BB2FE00B935E9 /* WriteEmotionVC.swift */,
-				522D1037292CEF2600B935E9 /* WriteCheckVC.swift */,
+				522D1037292CEF2600B935E9 /* CheckEmotion.swift */,
 			);
 			path = Write;
 			sourceTree = "<group>";
@@ -120,7 +121,6 @@
 				52D30725292A1AC70068EAFB /* SceneDelegate.swift */,
 				524E3DA0292A34B800259770 /* extension.swift */,
 				522D1035292CD91600B935E9 /* Launch Screen.storyboard */,
-				52D30731292A1AC80068EAFB /* Info.plist */,
 				52785A86292F24DF00C617B0 /* Assets */,
 			);
 			path = Application;
@@ -135,10 +135,20 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		52785A89292F58D900C617B0 /* RxFlow */ = {
+			isa = PBXGroup;
+			children = (
+				52785A87292F58D500C617B0 /* Step.swift */,
+				52785A8A292F643B00C617B0 /* AppFlow.swift */,
+			);
+			path = RxFlow;
+			sourceTree = "<group>";
+		};
 		52D30717292A1AC70068EAFB = {
 			isa = PBXGroup;
 			children = (
 				52D30722292A1AC70068EAFB /* RealmApp */,
+				52D30731292A1AC80068EAFB /* Info.plist */,
 				52D30721292A1AC70068EAFB /* Products */,
 				07D2FADC0C22B7503936A9AC /* Pods */,
 				F4D5E2D746DE87069D618570 /* Frameworks */,
@@ -159,6 +169,7 @@
 				52785A85292F24CF00C617B0 /* Application */,
 				522D102D292B3CDE00B935E9 /* Data */,
 				524E3DA3292A6DEE00259770 /* Presentation */,
+				52785A89292F58D900C617B0 /* RxFlow */,
 			);
 			path = RealmApp;
 			sourceTree = "<group>";
@@ -286,16 +297,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522D102F292B944300B935E9 /* ChoiceEmotionVC.swift in Sources */,
+				52785A8B292F643B00C617B0 /* AppFlow.swift in Sources */,
 				52187729292E4079008E7F6D /* MyPageVC.swift in Sources */,
 				52F2C718292DDB5300B0C178 /* CustomCell.swift in Sources */,
 				524E3DA1292A34B800259770 /* extension.swift in Sources */,
 				52D30724292A1AC70068EAFB /* AppDelegate.swift in Sources */,
+				52785A88292F58D500C617B0 /* Step.swift in Sources */,
 				524E3DB2292B244F00259770 /* FeedVC.swift in Sources */,
 				522D102C292B3BB100B935E9 /* model.swift in Sources */,
 				522D1034292BB2FE00B935E9 /* WriteEmotionVC.swift in Sources */,
 				52D30726292A1AC70068EAFB /* SceneDelegate.swift in Sources */,
-				522D1038292CEF2600B935E9 /* WriteCheckVC.swift in Sources */,
+				522D1038292CEF2600B935E9 /* CheckEmotion.swift in Sources */,
 				52187727292E3682008E7F6D /* tabBarControlloer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

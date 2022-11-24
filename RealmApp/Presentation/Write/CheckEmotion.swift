@@ -10,7 +10,7 @@ import Then
 import SnapKit
 import RealmSwift
 
-class WriteCheckVC: UIViewController {
+class CheckEmotion: UIViewController {
     
     var content:String = ""
     var date:String = ""

@@ -55,7 +55,7 @@ class WriteEmotionVC: UIViewController {
     
     @objc func doWrite() {
         
-        let rootVC = WriteCheckVC()
+        let rootVC = CheckEmotion()
         rootVC.content = emotionTextView.text!
         rootVC.modalPresentationStyle = .fullScreen
         self.present(rootVC, animated: false, completion: nil)
