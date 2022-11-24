@@ -7,14 +7,16 @@
 
 import UIKit
 import Then
-import SnapKit
 import RealmSwift
+import SnapKit
+import FlexLayout
+import PinLayout
 
 class WriteEmotionVC: UIViewController {
     
     private let backButton = UIBarButtonItem(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(doWrite))
     
-    private let backgound = UIImageView().then {
+    private let rootContainer = UIImageView().then {
         $0.image = UIImage(named: "background")
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -37,20 +39,20 @@ class WriteEmotionVC: UIViewController {
         $0.textAlignment = .center
     }
     
-    private let textNum = UILabel().then {
-        $0.text = "0/200"
-        $0.font = UIFont(name: "SDMiSaeng", size: 26)
-        $0.textColor = UIColor(white: 0, alpha: 0.3)
-        $0.textAlignment = .right
-    }
-    
     private let emotionTextView = UITextView().then {
         $0.text =  "왜 그 감정을 느꼈는 지 적어주세요."
         $0.textColor = UIColor(white: 0, alpha: 0.3)
         $0.font = UIFont(name:"SDMiSaeng" , size: 26)
         $0.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 0.7)
         $0.layer.cornerRadius = 12
-//        $0.isScrollEnabled = false
+        $0.isEditable = true
+    }
+    
+    private let textNum = UILabel().then {
+        $0.text = "0/200"
+        $0.font = UIFont(name: "SDMiSaeng", size: 26)
+        $0.textColor = UIColor(white: 0, alpha: 0.3)
+        $0.textAlignment = .right
     }
     
     @objc func doWrite() {
@@ -85,16 +87,16 @@ class WriteEmotionVC: UIViewController {
         attributedString.addAttribute(.foregroundColor, value: UIColor.mainColor as Any, range: ("\(emotionTextView.text.count)/200" as NSString).range(of:"\(emotionTextView.text.count)"))
         textNum.attributedText = attributedString
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         realmRead()
         emotionTextView.delegate = self
-        
-        view.backgroundColor = .systemBackground
         setup()
+
+        view.backgroundColor = .systemBackground
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -102,61 +104,38 @@ class WriteEmotionVC: UIViewController {
         self.view.endEditing(true)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        rootContainer.pin.all()
+        rootContainer.flex.layout()
+        
+    }
+    
     func setup() {
         
         navigationItem.rightBarButtonItem = self.backButton
-        [
-            backgound,
-            emotionText,
-            emotionImage,
-            guiedText,
-            emotionTextView,
-            textNum
-        ].forEach { self.view.addSubview($0) }
         
-        backgound.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.left.equalToSuperview()
-            $0.right.equalToSuperview()
-            $0.bottom.equalToSuperview()
+        view.addSubview(rootContainer)
+        
+        rootContainer.flex.direction(.column).define { flex in
+            flex.addItem(emotionText)
+                .marginTop(100)
+            flex.addItem(emotionImage)
+                .marginTop(16)
+                .marginLeft(160)
+                .marginRight(160)
+            flex.addItem(guiedText)
+                .marginTop(16)
+            flex.addItem(emotionTextView)
+                .marginLeft(20)
+                .marginRight(20)
+                .paddingBottom(120)
+            flex.addItem(textNum)
+                .marginRight(20)
         }
         
-        emotionText.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(100)
-            $0.left.equalToSuperview().offset(20)
-            $0.right.equalToSuperview().offset(-20)
-            $0.bottom.equalTo(emotionText.snp.top).offset(30)
-        }
-        
-        emotionImage.snp.makeConstraints {
-            $0.top.equalTo(emotionText.snp.bottom).offset(16)
-            $0.left.equalToSuperview().offset(160)
-            $0.right.equalToSuperview().offset(-160)
-            $0.bottom.equalTo(emotionImage.snp.top).offset(70)
-        }
-        
-        guiedText.snp.makeConstraints {
-            $0.top.equalTo(emotionImage.snp.bottom).offset(16)
-            $0.left.equalToSuperview().offset(100)
-            $0.right.equalToSuperview().offset(-100)
-            $0.bottom.equalTo(guiedText.snp.top).offset(20)
-        }
-        
-        emotionTextView.snp.makeConstraints {
-            $0.top.equalTo(guiedText.snp.bottom).offset(40)
-            $0.left.equalToSuperview().offset(20)
-            $0.right.equalToSuperview().offset(-20)
-            $0.bottom.equalTo(emotionTextView.snp.top).offset(120)
-        }
-        
-        textNum.snp.makeConstraints {
-            $0.top.equalTo(emotionTextView.snp.bottom)
-            $0.left.equalToSuperview()
-            $0.right.equalToSuperview().offset(-20)
-            $0.bottom.equalTo(textNum.snp.top).offset(28)
-        }
     }
-    
 }
 
 extension WriteEmotionVC: UITextViewDelegate {

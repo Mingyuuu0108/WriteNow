@@ -23,7 +23,9 @@ class tabBarController: UITabBarController, Stepper {
     }
     
     @objc func nextPage() {
-        self.steps.accept(TestStep.writeEmotion)
+        let vc = WriteEmotionVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+//        self.steps.accept(TestStep.writeEmotion)
     }
     
     override func viewDidLoad() {

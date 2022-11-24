@@ -42,7 +42,7 @@ class MyPageVC: UIViewController, UITextFieldDelegate {
     }
     
     private let nextButton = UIButton().then {
-        $0.setTitle("다음", for: .normal)
+        $0.setTitle("바꾸기", for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         $0.titleLabel?.textColor = .systemBackground
         $0.titleLabel?.textAlignment = .center

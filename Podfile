@@ -6,9 +6,14 @@ target 'RealmApp' do
   use_frameworks!
 
   # Pods for RealmApp
-  pod 'SnapKit', '~> 5.0.0'
+
   pod 'Then'
   pod 'RealmSwift', '~>10'
   pod 'RxFlow'
+
+  # layout
+  pod 'FlexLayout'
+  pod 'PinLayout'
+  pod 'SnapKit', '~> 5.0.0'
 
 end
